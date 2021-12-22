@@ -14,5 +14,13 @@ console.log("data type is " + typeof nullVar);
 let undef = undefined;
 console.log("data type is " + typeof undef);
 // reference data types
+// arrays
 myarr = [1, 2, 3, 4, 5, "false"];
 console.log("data type is " + typeof myarr);
+// object literals
+const st1 = {
+  awais: 34,
+  "mdm jan": 35,
+  sweety_wife: 36,
+};
+console.log(st1);
