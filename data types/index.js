@@ -7,3 +7,6 @@ console.log("Data type is" + " " + typeof marks);
 // boolen
 const isDriver = true;
 console.log("Data type is " + typeof isDriver);
+// null
+const nullVar = null;
+console.log("data type is " + typeof nullVar);
