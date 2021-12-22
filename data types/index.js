@@ -10,3 +10,6 @@ console.log("Data type is " + typeof isDriver);
 // null
 const nullVar = null;
 console.log("data type is " + typeof nullVar);
+// undefined
+let undef = undefined;
+console.log("data type is " + typeof undef);
