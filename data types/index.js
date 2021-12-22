@@ -13,3 +13,6 @@ console.log("data type is " + typeof nullVar);
 // undefined
 let undef = undefined;
 console.log("data type is " + typeof undef);
+// reference data types
+myarr = [1, 2, 3, 4, 5, "false"];
+console.log("data type is " + typeof myarr);
