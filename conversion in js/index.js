@@ -16,3 +16,11 @@ console.log(myArr, myArr.length, typeof myArr);
 const myArr1 = String([1, 2, 3, 4, 5, 6, 7, 8, 9]);
 
 console.log(myArr1, myArr1.length, typeof myArr1);
+const i = 24;
+console.log(i.toString());
+
+let stri = Number("3456");
+stri = Number("3456d");
+stri = Number(false);
+stri = String([1,2,3,,4,5,6,7])
+console.log(stri, typeof stri);
