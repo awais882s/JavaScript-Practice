@@ -27,5 +27,5 @@ console.log(st1);
 // functions
 function findname() {}
 console.log(typeof findname);
-const date = newDate();
-console.log(typeof date);
+// const date = newDate();
+// console.log(typeof date);
