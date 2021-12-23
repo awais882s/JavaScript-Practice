@@ -11,3 +11,13 @@ console.log(fruits[0]);
 console.log(marks.includes("mango"));
 console.log(arr.length);
 console.log(Array.isArray(arr));
+arr[0] = "awais";
+console.log(arr);
+let arrelement = arr[0];
+console.log("Element:", arrelement);
+console.log(marks.indexOf(23));
+
+let val = marks.indexOf(45);
+console.log(val);
+
+// mutating or modifying arrays
