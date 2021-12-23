@@ -21,3 +21,5 @@ console.log(html.endsWith("para"));
 console.log(html.endsWith("soni"));
 console.log(html.includes("gfd"));
 console.log(html.substring(1,3));
+console.log(html.slice(0,4));
+console.log(html.split(" "));
