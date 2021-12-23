@@ -21,3 +21,23 @@ let val = marks.indexOf(45);
 console.log(val);
 
 // mutating or modifying arrays
+marks.push(100);
+console.log(marks);
+marks.unshift(10009);
+console.log(marks);
+marks.pop();
+console.log(marks);
+marks.shift();
+console.log(marks);
+marks.splice(1, 2);
+console.log(marks);
+console.log(fruits);
+fruits.splice(1, 2);
+console.log(fruits);
+fruits.push("Grapes", "blueberry");
+console.log(fruits);
+let frt1 = fruits.slice(1, 3);
+console.log(frt1);
+console.log(marks);
+marks.reverse();
+console.log(marks);
