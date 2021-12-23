@@ -41,13 +41,20 @@ console.log(frt1);
 console.log(marks);
 marks.reverse();
 console.log(marks);
-let marks2 = String([1, 2, 3, 45, 6,"awais"]);
+let marks2 = String([1, 2, 3, 45, 6, "awais"]);
 marks = marks.concat(marks2);
 console.log(marks);
 
-
 //++++++++++++++++++++++++++++++++++++++++++++++++=========================================
 
+console.log("Objects in js");
 
+let myObj = {
+    name:"awais",
+    rollNo:15424,
+    Section:"A",
+    Numbers : [1,2,34,5]
+}
 
-
+console.log(myObj.name);
+console.log(myObj.Numbers);
