@@ -1,5 +1,5 @@
 console.log("Arrays and Objects");
-const marks = [23, 41, 45, 68, 89, 54, 22];
+let marks = [23, 41, 45, 68, 89, 54, 22];
 const fruits = ["apple", "mango", "pineapple", "bannana"];
 const mixed = ["str", 89, [34, 35]];
 
@@ -41,3 +41,13 @@ console.log(frt1);
 console.log(marks);
 marks.reverse();
 console.log(marks);
+let marks2 = String([1, 2, 3, 45, 6,"awais"]);
+marks = marks.concat(marks2);
+console.log(marks);
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++=========================================
+
+
+
+
