@@ -20,6 +20,16 @@ console.log(html.charAt(1));
 console.log(html.endsWith("para"));
 console.log(html.endsWith("soni"));
 console.log(html.includes("gfd"));
-console.log(html.substring(1,3));
-console.log(html.slice(0,4));
-console.log(html.split(" "));
+console.log(html.substring(1, 3));
+console.log(html.slice(0, 4));
+
+console.log("REPLACE FUNCTIONS");
+console.log(html.replace("this", "AI"));
+let fruits = "orange";
+let fruits1 = "apple";
+let myHtml = `Hello ${name}
+<h1> this is heading </h1>
+<p> you like ${fruits} and ${fruits1}
+
+`;
+document.body.innerHTML = myHtml;
