@@ -24,3 +24,4 @@ if (doesDrive || age > 18) {
 }
 // ternary operator
 console.log(age === 45 ? "age is 45" : "age is not 45");
+
