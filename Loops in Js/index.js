@@ -8,3 +8,7 @@ console.log("loops in js");
 for (let i = 0; i < 100; i++) {
   console.log(i);
 }
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+arr.forEach(function (index) {
+  console.log(index);
+});
