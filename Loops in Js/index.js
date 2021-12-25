@@ -18,8 +18,8 @@ for (let i = 0; i < 100; i++) {
 // ========================================================================
 console.log("For loops in========================== js");
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-arr.forEach(function (index) {
-  console.log(index);
+arr.forEach(function (index , index , array) {
+  console.log(index,index,array);
 });
 let obj = {
     name:"awais",
