@@ -16,3 +16,16 @@ let name = "awais";
 let name2 = "lovers g";
 greeting(name, "Thanks a lot");
 greeting(name2, "Thanks a lover");
+
+const myObj = {
+  name: "awais",
+  game: function () {
+    return "GTA VICE CITY";
+  },
+};
+console.log(myObj.game());
+
+arr = ["fruits", "vegetables", "furnitures"];
+arr.forEach(function (element, index) {
+  console.log(element, index);
+});
