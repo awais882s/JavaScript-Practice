@@ -25,3 +25,18 @@ if (doesDrive || age > 18) {
 // ternary operator
 console.log(age === 45 ? "age is 45" : "age is not 45");
 
+switch (age) {
+  case 18:
+    console.log("you are 18");
+    break;
+  case 28:
+    console.log("you are 28");
+    break;
+  case 38:
+    console.log("you are 38");
+    break;
+
+  default:
+    console.log("you are unknow age ");
+    break;
+}
