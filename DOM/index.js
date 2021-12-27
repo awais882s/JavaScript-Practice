@@ -9,3 +9,8 @@ a = window.innerHeight;
 c = window.innerWidth;
 console.log(a);
 console.log(c);
+// window location
+loc = location.toString();
+console.log(loc);
+h = window.history;
+console.log(h);
