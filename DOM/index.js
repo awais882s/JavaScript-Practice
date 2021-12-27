@@ -1,7 +1,11 @@
 console.log("DOM IN JS");
-let a = window;
+let a = window.document;
 // alert("Hi Awais Here");
-a = prompt("This will destroy your computer. Type your name=:");
+// a = prompt("This will destroy your computer. Type your name=:");
+// console.log(a);
+// b = confirm("Are you sure you want to delete this page?");
+// console.log(b);
+a = window.innerHeight;
+c = window.innerWidth;
 console.log(a);
-b = confirm("Are you sure you want to delete this page?");
-console.log(b);
+console.log(c);
