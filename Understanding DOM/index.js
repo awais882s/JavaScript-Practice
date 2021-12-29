@@ -13,3 +13,5 @@ a = document.all;
 b = document.links[0].href;
 // use document.images and document.scripts and print the list of images and scripts on the html pages
 console.log(b);
+img = document.images;
+console.log(img);
