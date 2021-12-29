@@ -15,3 +15,8 @@ element.innerText = "Awais is personality man,s";
 element.innerHTML = "<h1> Awais alone </h1>";
 console.log(element.innerHTML);
 
+let sel = document.querySelector("#myfirst");
+sel = document.querySelector(".child");
+sel = document.querySelector('h1');
+sel.style.color = "green"
+console.log(sel);
