@@ -13,4 +13,5 @@ let element = document.getElementById("myfirst");
 element.style.color = "red";
 element.innerText = "Awais is personality man,s";
 element.innerHTML = "<h1> Awais alone </h1>";
-console.log(element);
+console.log(element.innerHTML);
+
