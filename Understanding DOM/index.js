@@ -20,5 +20,6 @@ console.log(img);
 var b = document.links;
 var string = "4";
 Array.from(b).forEach(function (element) {
-  if (element.href.includes(string)) console.log(element.href);
+  if (element.href.includes(string)) 
+  console.log(element.href);
 });
