@@ -28,6 +28,14 @@ elems = document.getElementsByClassName("container");
 console.log(elems);
 Array.from(elems).forEach((element) => {
   console.log(element);
-  element.style.color = "blue"
+  element.style.color = "blue";
 });
 console.log(elems[0].getElementsByClassName("child"));
+
+//  for loops use
+// console.log("Using For Loops");
+// for (let index = 0; index < elems.length; index++) {
+//   const element = elems[index];
+//   console.log(element);
+//   element.style.color = "pink"
+// }
