@@ -7,4 +7,8 @@ console.log(a);
 //  2.Single elements selectors
 
 let element = document.getElementById("myfirst");
+// element = element.className;
+// element = element.childNodes;
+// element = element.parentNode;
+element.style.color = "red";
 console.log(element);
