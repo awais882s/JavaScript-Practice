@@ -15,3 +15,10 @@ b = document.links[0].href;
 console.log(b);
 img = document.images;
 console.log(img);
+// exercise
+
+var b = document.links;
+var string = "4";
+Array.from(b).forEach(function (element) {
+  if (element.href.includes(string)) console.log(element.href);
+});
