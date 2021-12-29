@@ -17,6 +17,17 @@ console.log(element.innerHTML);
 
 let sel = document.querySelector("#myfirst");
 sel = document.querySelector(".child");
-sel = document.querySelector('h1');
-sel.style.color = "green"
+sel = document.querySelector("h1");
+sel.style.color = "green";
 console.log(sel);
+
+// multi elements selectors
+
+let elems = document.getElementsByClassName("child");
+elems = document.getElementsByClassName("container");
+console.log(elems);
+Array.from(elems).forEach((element) => {
+  console.log(element);
+  element.style.color = "blue"
+});
+console.log(elems[0].getElementsByClassName("child"));
