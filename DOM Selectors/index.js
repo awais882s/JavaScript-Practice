@@ -11,4 +11,6 @@ let element = document.getElementById("myfirst");
 // element = element.childNodes;
 // element = element.parentNode;
 element.style.color = "red";
+element.innerText = "Awais is personality man,s";
+element.innerHTML = "<h1> Awais alone </h1>";
 console.log(element);
