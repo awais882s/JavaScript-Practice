@@ -17,3 +17,14 @@ node type lists
 8.Comment
 9.document
 10.DocType */
+
+let container = document.querySelector("div.container");
+console.log(container.children[1].children[0].children);
+console.log(container.firstElementChild);
+console.log(container.childNodes);
+console.log(container.lastChild);
+console.log(container.childElementCount);
+
+// another
+console.log(container.firstElementChild.parentNode);
+console.log(container.firstElementChild.nextElementSibling);
