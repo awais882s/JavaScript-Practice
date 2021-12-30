@@ -25,3 +25,12 @@ heading.id = "headings";
 console.log(heading);
 let life = document.querySelector(".life");
 life.replaceWith(heading);
+// removing elements
+let newOnes = document.querySelector("#chat");
+newOnes.remove(document.getElementById("chat"));
+console.log(newOnes);
+// ================================================= check that hasattributes
+let pri = element.hasAttribute("class");
+element.removeAttribute("id");
+console.log(pri);
+console.log(element);
