@@ -8,5 +8,10 @@ document.getElementById("heading").addEventListener("click", function (e) {
   variable = e.target.className;
   variable = Array.from(e.target.classList);
   //   variable = e.target.id;
+  variable = e.offsetX;
+  variable = e.clientX;
+  variable = e.clientY;
   console.log(variable);
 });
+
+// 
