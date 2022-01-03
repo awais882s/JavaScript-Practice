@@ -24,3 +24,12 @@ document.querySelector(".no").addEventListener("mouseenter", function () {
 document.querySelector(".no").addEventListener("mouseleave", function () {
   console.log("you exits no");
 });
+
+// triggered the mouse
+document
+  .querySelector(".container")
+  .addEventListener("mousemove", function (e) {
+    console.log("you have triggered the mouse");
+    console.log(e.offsetX, e.offsetY);
+    document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY},${e.offsetY},154)`;
+  });
