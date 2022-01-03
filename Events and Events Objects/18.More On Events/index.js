@@ -15,3 +15,12 @@ function func3(e) {
   console.log("thanks its a mouse down functions", e);
   e.preventDefault();
 }
+
+// on dummy divs
+document.querySelector(".no").addEventListener("mouseenter", function () {
+  console.log("you entered nothings ");
+});
+
+document.querySelector(".no").addEventListener("mouseleave", function () {
+  console.log("you exits no");
+});
