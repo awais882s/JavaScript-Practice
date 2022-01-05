@@ -14,3 +14,6 @@ localStorage.removeItem("name");
 
 sbzi = JSON.parse(localStorage.getItem("sbzi"));
 console.log(sbzi);
+// ====================================================================
+// session storages
+sessionStorage.setItem("apka name", "muhammad awais");
