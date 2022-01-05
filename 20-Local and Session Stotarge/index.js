@@ -1,0 +1,1 @@
+console.log("local and session storage");
