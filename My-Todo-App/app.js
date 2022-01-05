@@ -27,3 +27,6 @@ function deleteItem(e) {
   e.parentNode.remove();
   // console.log(e.parentNode);
 }
+function deleteAll() {
+  list.innerHTML = "";
+}
