@@ -1,0 +1,9 @@
+body {
+  background-color: whitesmoke;
+}
+.to {
+  display: contents;
+  place-items: center;
+  align-items: center;
+  background-color: tomato;
+}
