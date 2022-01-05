@@ -16,6 +16,14 @@ function addTodo() {
   delbtn.appendChild(delText);
   li.appendChild(delbtn);
 
+  // create edit button
+  var editbtn = document.createElement("button");
+  var editText = document.createTextNode("Edit Button");
+  editbtn.setAttribute("class", "btn");
+  editbtn.appendChild(editText);
+  editbtn.setAttribute("onclick", "editItem(this)");
+  li.appendChild(editbtn);
+
   //   console.log(todo_item.value);
   list.appendChild(li);
 
@@ -29,4 +37,11 @@ function deleteItem(e) {
 }
 function deleteAll() {
   list.innerHTML = "";
+}
+function editItem(e) {
+  var val = e.parentNode.firstChild.nodeValue;
+  var editValue = prompt("Enter Edit Value", val);
+  e.parentNode.firstChild.nodeValue = editValue;
+  // e.parentNode.firstChild.nodeValue = "awais iqbal";
+  console.log(e.parentNode.firstChild);
 }
