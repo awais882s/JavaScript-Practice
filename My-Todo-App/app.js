@@ -24,7 +24,6 @@ function addTodo() {
   console.log(li);
 }
 function deleteItem(e) {
-  console.log(e);
-  
-  
+  e.parentNode.remove();
+  // console.log(e.parentNode);
 }
