@@ -12,17 +12,20 @@ body {
 #todo-item{
   width: 20rem;
   height: 2rem;
-  border-radius: 50px;
+  border-radius: 15px;
   border-style: none;
   text-indent: 20px;
   border:1px solid #3498db;
 }
 #btn{
-  border-radius: 50px;
+  border-radius: 15px;
   width: 6rem;
   height: 2rem;
   border-style: none;
   background-color: #25CCF7;
   color: black;
   font: bolder;
+}
+.btn{
+  background-color: dodgerblue;
 }
