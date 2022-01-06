@@ -43,5 +43,8 @@ function editItem(e) {
   var editValue = prompt("Enter Edit Value", val);
   e.parentNode.firstChild.nodeValue = editValue;
   // e.parentNode.firstChild.nodeValue = "awais iqbal";
-  console.log(e.parentNode.firstChild);
+  // console.log(e.parentNode.firstChild);
 }
+
+// links
+// https://youtu.be/wmqXazMJH0o    youtube links
