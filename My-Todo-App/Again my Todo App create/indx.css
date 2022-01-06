@@ -18,7 +18,7 @@ body {
     text-indent: 20px;
     border:2px solid #6c5ce7;
   }
-  #btn_add{
+  .btn_add{
     border-radius: 10px;
     width: 6rem;
     height: 2rem;

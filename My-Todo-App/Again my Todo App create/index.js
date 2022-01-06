@@ -17,21 +17,18 @@ function addTodo() {
 
   let delbtn = document.createElement("button");
   let delbtn_Text = document.createTextNode("Delete Todo");
-  delbtn.setAttribute("class","deletebtn");
-  delbtn.setAttribute("onclick","delItem(this)");
-  console.log(delbtn);
+  delbtn.setAttribute("class", "deletebtn");
+  delbtn.setAttribute("onclick", "delItem(this)");
+  //   console.log(delbtn);
   delbtn.appendChild(delbtn_Text);
   li.appendChild(delbtn);
-
-//   
-
-
-
 }
 
 //   to delte items
 function delItem(e) {
-    e.parentNode.remove();
-    // console.log(e);
-    
+  e.parentNode.remove();
+  // console.log(e);
+}
+function deleteAll() {
+  list.innerHTML = "";
 }
