@@ -10,24 +10,33 @@ function addTodo() {
   let liText = document.createTextNode(todo_input.value);
   li.appendChild(liText);
   // for empty input tags
-  todo_input.value = "";
-  list.appendChild(li);
 
-  //   create delete buttons
+  if (todo_input.value == "") {
+    alert("Cannot add empty values");
+  } else {
+    //   create delete buttons
+    todo_input.value = "";
+    list.appendChild(li);
 
-  let delbtn = document.createElement("button");
-  let delbtn_Text = document.createTextNode("Delete Todo");
-  delbtn.setAttribute("class", "deletebtn");
-  delbtn.setAttribute("onclick", "delItem(this)");
-  //   console.log(delbtn);
-  delbtn.appendChild(delbtn_Text);
-  li.appendChild(delbtn);
-}
+    let delbtn = document.createElement("button");
+    let delbtn_Text = document.createTextNode("Delete Todo");
+    delbtn.setAttribute("class", "deletebtn");
+    delbtn.setAttribute("onclick", "delItem(this)");
+    //   console.log(delbtn);
+    delbtn.appendChild(delbtn_Text);
+    li.appendChild(delbtn);
+    //   create edit Buttons
+    let editbtn = document.createElement("button");
+    let edit_text = document.createTextNode("Edit Todo");
+    editbtn.appendChild(edit_text);
+    li.appendChild(editbtn);
+  }
 
-//   to delte items
-function delItem(e) {
-  e.parentNode.remove();
-  // console.log(e);
+  //   to delte items
+  function delItem(e) {
+    e.parentNode.remove();
+    // console.log(e);
+  }
 }
 function deleteAll() {
   list.innerHTML = "";
