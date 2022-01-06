@@ -28,16 +28,23 @@ function addTodo() {
     //   create edit Buttons
     let editbtn = document.createElement("button");
     let edit_text = document.createTextNode("Edit Todo");
+    editbtn.setAttribute("onclick","editbutton(this)");
     editbtn.appendChild(edit_text);
     li.appendChild(editbtn);
   }
-
-  //   to delte items
-  function delItem(e) {
-    e.parentNode.remove();
-    // console.log(e);
-  }
+}
+//   to delte items
+function delItem(e) {
+  e.parentNode.remove();
+  // console.log(e);
 }
 function deleteAll() {
   list.innerHTML = "";
+}
+function editbutton(e) {
+   let value = e.parentNode.firstChild.nodeValue ;
+  let editvalue  = prompt("Enter Edit Value",value)
+  e.parentNode.firstChild.nodeValue = editvalue;
+  console.log(e.parentNode.firstChild.nodeValue);
+  
 }
