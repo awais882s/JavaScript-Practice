@@ -5,10 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="./expense.css">
+    <link rel="stylesheet" href="./expense.css" />
   </head>
   <body>
-    <h1>Expense Tracker</h1>
+    <div class="app">
+      <h1>Expense Tracker</h1>
+      <div class="balance-container">
+        <h2>Your Balance</h2>
+        <div>$1000</div>
+      </div>
+      <div class="cashflow">
+        <div class="income-container">
+          <h2>Income</h2>
+          <div id="income">$1200</div>
+        </div>
+        <div class="expense-container">
+          <h2>Expense</h2>
+          <div id="expense">$200</div>
+        </div>
+      </div>
+      <div class="transactions-container">
+        <h2>Transaction History</h2>
+        <ul>
+          <li>Salary</li>
+          <div>
+            <span class="income-amt"> $5000 </span>
+            <button>X</button>
+          </div>
+          <li>Buy Grocery - 50$</li>
+          <div>
+            <span class="expense-amt"> $50 </span>
+            <button>X</button>
+          </div>
+          <li>Buy Guitar</li>
+          <div>
+            <span class="expense-amt"> $500 </span>
+            <button>X</button>
+          </div>
+        </ul>
+      </div>
+      <div class="form-container">
+        <h2>Add New Transactions</h2>
+        <form action="">
+          <label for="name">Name</label>
+          <input type="text" name="" id="name" />
+          <label for="amount">Amount</label>
+          <input type="number" name="" id="amount" /><br><br>
+          <button id="incomeBtn">Add Income</button>
+          <button id="expenseBtn">Add Expense</button>
+        </form>
+      </div>
+    </div>
   </body>
   <script src="./expense.js"></script>
 </html>
