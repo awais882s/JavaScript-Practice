@@ -8,28 +8,33 @@ function addTodo() {
   var liText = document.createTextNode(todo_item.value);
   li.appendChild(liText);
 
-  // create delete buttons
-  var delbtn = document.createElement("button");
-  var delText = document.createTextNode("Delete");
-  delbtn.setAttribute("class", "btn");
-  delbtn.setAttribute("onclick", "deleteItem(this)");
-  delbtn.appendChild(delText);
-  li.appendChild(delbtn);
+  // if empty lists add
+  if (todo_item.value == "") {
+    alert("list cannot add empty values");
+  } else {
+    // create delete buttons
+    var delbtn = document.createElement("button");
+    var delText = document.createTextNode("Delete");
+    delbtn.setAttribute("class", "btn");
+    delbtn.setAttribute("onclick", "deleteItem(this)");
+    delbtn.appendChild(delText);
+    li.appendChild(delbtn);
 
-  // create edit button
-  var editbtn = document.createElement("button");
-  var editText = document.createTextNode("Edit Button");
-  editbtn.setAttribute("class", "btn");
-  editbtn.appendChild(editText);
-  editbtn.setAttribute("onclick", "editItem(this)");
-  li.appendChild(editbtn);
+    // create edit button
+    var editbtn = document.createElement("button");
+    var editText = document.createTextNode("Edit Button");
+    editbtn.setAttribute("class", "btn");
+    editbtn.appendChild(editText);
+    editbtn.setAttribute("onclick", "editItem(this)");
+    li.appendChild(editbtn);
 
-  //   console.log(todo_item.value);
-  list.appendChild(li);
+    //   console.log(todo_item.value);
+    list.appendChild(li);
 
-  todo_item.value = "";
+    todo_item.value = "";
 
-  console.log(li);
+    console.log(li);
+  }
 }
 function deleteItem(e) {
   e.parentNode.remove();
