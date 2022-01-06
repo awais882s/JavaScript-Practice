@@ -1,5 +1,5 @@
 body {
-  /* background-color: #34495e; */
+  background-color:#f8a5c2;
   text-align: center;
   padding-top: 30px;
 }
@@ -14,18 +14,24 @@ body {
   height: 2rem;
   border-radius: 15px;
   border-style: none;
+  font-size: 1rem;
   text-indent: 20px;
-  border:1px solid #3498db;
+  border:3px solid #ff5252;
 }
 .btn{
   border-radius: 15px;
   width: 6rem;
   height: 2rem;
   border-style: none;
-  background-color: #25CCF7;
+  background-color: transparent;
   color: black;
   font: bolder;
+  font-size: 0.875rem;
 }
 .btn{
-  background-color: dodgerblue;
+  background-color: #2ed573;
+}
+#list{
+  font-size: 2rem;
+  text-align: center;
 }

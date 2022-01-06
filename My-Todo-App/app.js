@@ -33,7 +33,7 @@ function addTodo() {
 
     todo_item.value = "";
 
-    console.log(li);
+    // console.log(li);
   }
 }
 function deleteItem(e) {
