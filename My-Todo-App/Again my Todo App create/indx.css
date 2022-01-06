@@ -35,4 +35,5 @@ body {
   #list{
     font-size: 2rem;
     text-align: center;
+    list-style-type:decimal;
   }
