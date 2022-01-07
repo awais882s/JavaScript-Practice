@@ -30,7 +30,7 @@ function init() {
   incomeEl.innerHTML = `${state.income}`;
   expensEl.innerHTML = `${state.expense}`;
 
-  var transactionEl, containerEl, amountEl, item;
+  var transactionEl, containerEl, amountEl, item ,btnEl;
   for (var i = 0; i < state.transactions.length; i++) {
     item = state.transactions[i];
     transactionEl = document.createElement("li");
@@ -47,6 +47,9 @@ function init() {
     amountEl.innerHTML = `$${item.amount}`;
     console.log(amountEl);
     containerEl.appendChild(amountEl);
+    btnEl = document.createElement("button");
+    btnEl.innerHTML = "X";
+    containerEl.appendChild(btnEl);
     transactionEl.appendChild(containerEl);
   }
 }
