@@ -1,7 +1,7 @@
 var state = {
   balance: 0,
-  income: 1200,
-  expense: 200,
+  income: 400,
+  expense: 100,
   transactions: [
     {
       name: "salary",
