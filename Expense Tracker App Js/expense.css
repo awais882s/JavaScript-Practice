@@ -85,7 +85,7 @@ h2 {
 }
 .form-container form label {
   padding-bottom: 10px;
-  font-size:1.2rem;
+  font-size: 1.2rem;
 }
 .form-container form input {
   height: 25px;
@@ -94,19 +94,19 @@ h2 {
 .form-container {
   margin-top: 40px;
 }
-.form-container form button{
+.form-container form button {
   border: none;
-  padding: 10px ;
+  padding: 10px;
   margin-bottom: 10px;
   font-size: 1em;
   text-transform: uppercase;
   color: white;
 }
-#incomeBtn{
+#incomeBtn {
   background-color: var(--income);
   cursor: pointer;
 }
-#expenseBtn{
+#expenseBtn {
   background-color: var(--expense);
   cursor: pointer;
 }
