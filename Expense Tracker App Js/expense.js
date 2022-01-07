@@ -4,21 +4,24 @@ var state = {
   income: 400,
   expense: 100,
   transactions: [
-    {
-      name: "salary",
-      amount: 1000,
-      type: "income",
-    },
-    {
-      name: "Buy Grocery",
-      amount: 50,
-      type: "expense",
-    },
-    {
-      name: "Buy Guitar",
-      amount: 500,
-      type: "expense",
-    },
+    // {
+    //   id: uniqueId(),
+    //   name: "salary",
+    //   amount: 1000,
+    //   type: "income",
+    // },
+    // {
+    //   id: uniqueId(),
+    //   name: "Buy Grocery",
+    //   amount: 50,
+    //   type: "expense",
+    // },
+    // {
+    //   id: uniqueId(),
+    //   name: "Buy Guitar",
+    //   amount: 500,
+    //   type: "expense",
+    // },
   ],
 };
 // create all variables==========================================================================================
@@ -34,6 +37,11 @@ function init() {
   updateState();
   initListeners();
 }
+// create unique function to delete specific value from the list============================================================
+
+function uniqueId() {
+  return Math.round(Math.random() * 1000000);
+}
 // function listeners on buttons ==================================================================
 function initListeners() {
   incomeBtnEl.addEventListener("click", onAddIncomeClick);
@@ -48,6 +56,7 @@ function onAddIncomeClick() {
 function addTransaction(name, amount, type) {
   if (name !== "" && amount !== "") {
     var transaction = {
+      id: uniqueId(),
       name: name,
       amount: amount,
       type: type,
@@ -64,6 +73,21 @@ function addTransaction(name, amount, type) {
 function onAddExpenseClick() {
   //   console.log("income", nameInputEl.value, amountInputEl.value);
   addTransaction(nameInputEl.value, amountInputEl.value, "expense");
+}
+// function onDeleteClick ====================================================================================
+
+function onDeleteClick(event) {
+  var id = parseInt(event.target.getAttribute("data-id"));
+  var deleteIndex;
+  for (var i = 0; i < state.transactions.length; i++) {
+    if (state.transactions[i].id === id) {
+      deleteIndex = i;
+      break;
+    }
+  }
+  state.transactions.splice(deleteIndex, 1);
+  updateState();
+  //   console.log(event.target);
 }
 // function update states========================================================================
 function updateState() {
@@ -113,6 +137,7 @@ function render() {
     // console.log(amountEl);
     containerEl.appendChild(amountEl);
     btnEl = document.createElement("button");
+    btnEl.setAttribute("data-id", item.id);
     btnEl.innerHTML = "X";
     btnEl.addEventListener("click", onDeleteClick);
     containerEl.appendChild(btnEl);
