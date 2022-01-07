@@ -1,3 +1,4 @@
+// create variable and store some data in objects and arrays ================================================================================
 var state = {
   balance: 0,
   income: 400,
@@ -20,31 +21,51 @@ var state = {
     },
   ],
 };
-// functions============================================
+// create all variables==========================================================================================
 var balanceEl = document.querySelector("#balance");
 var incomeEl = document.querySelector("#income");
 var expensEl = document.querySelector("#expense");
 var transactionsEl = document.querySelector("#transaction");
 var incomeBtnEl = document.querySelector("#incomeBtn");
 var expenseBtnEl = document.querySelector("#expenseBtn");
+var nameInputEl = document.querySelector("#name");
+var amountInputEl = document.querySelector("#amount");
 function init() {
   updateState();
   initListeners();
-  render();
 }
-// function listeners on buttons
+// function listeners on buttons ==================================================================
 function initListeners() {
   incomeBtnEl.addEventListener("click", onAddIncomeClick);
   expenseBtnEl.addEventListener("click", onAddExpenseClick);
 }
+// function onAddIncomeClick ===================================================================
 function onAddIncomeClick() {
-    
-
+  addTransaction(nameInputEl.value, amountInputEl.value, "income");
+  //   console.log("income", nameInputEl.value, amountInputEl.value);
 }
+// function addTransaction =======================================================================
+function addTransaction(name, amount, type) {
+  if (name !== "" && amount !== "") {
+    var transaction = {
+      name: name,
+      amount: amount,
+      type: type,
+    };
+    state.transactions.push(transaction);
+    updateState();
+  } else {
+    alert("Please Enter Vaild Data");
+  }
+  nameInputEl.value = "";
+  amountInputEl.value = "";
+}
+// function onAddExpenseClick =====================================================================
 function onAddExpenseClick() {
-    
+  //   console.log("income", nameInputEl.value, amountInputEl.value);
+  addTransaction(nameInputEl.value, amountInputEl.value, "expense");
 }
-// function update states
+// function update states========================================================================
 function updateState() {
   var balance = 0,
     income = 0,
@@ -65,14 +86,16 @@ function updateState() {
   state.balance = balance;
   state.income = income;
   state.expense = expense;
+  render();
 }
-// function Render
+// function Render==============================================================================
 function render() {
   balanceEl.innerHTML = `$${state.balance}`;
   incomeEl.innerHTML = `$${state.income}`;
   expensEl.innerHTML = `$${state.expense}`;
 
   var transactionEl, containerEl, amountEl, item, btnEl;
+  transactionsEl.innerHTML = "";
   for (var i = 0; i < state.transactions.length; i++) {
     item = state.transactions[i];
     transactionEl = document.createElement("li");
@@ -91,9 +114,10 @@ function render() {
     containerEl.appendChild(amountEl);
     btnEl = document.createElement("button");
     btnEl.innerHTML = "X";
+    btnEl.addEventListener("click", onDeleteClick);
     containerEl.appendChild(btnEl);
     transactionEl.appendChild(containerEl);
   }
 }
-
+// function init call ====================================================================================
 init();
