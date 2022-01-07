@@ -5,7 +5,7 @@ var state = {
   transactions: [
     {
       name: "salary",
-      amount: 5000,
+      amount: 1000,
       type: "income",
     },
     {
@@ -25,12 +25,54 @@ var balanceEl = document.querySelector("#balance");
 var incomeEl = document.querySelector("#income");
 var expensEl = document.querySelector("#expense");
 var transactionsEl = document.querySelector("#transaction");
+var incomeBtnEl = document.querySelector("#incomeBtn");
+var expenseBtnEl = document.querySelector("#expenseBtn");
 function init() {
-  balanceEl.innerHTML = `${state.balance}`;
-  incomeEl.innerHTML = `${state.income}`;
-  expensEl.innerHTML = `${state.expense}`;
+  updateState();
+  initListeners();
+  render();
+}
+// function listeners on buttons
+function initListeners() {
+  incomeBtnEl.addEventListener("click", onAddIncomeClick);
+  expenseBtnEl.addEventListener("click", onAddExpenseClick);
+}
+function onAddIncomeClick() {
+    
 
-  var transactionEl, containerEl, amountEl, item ,btnEl;
+}
+function onAddExpenseClick() {
+    
+}
+// function update states
+function updateState() {
+  var balance = 0,
+    income = 0,
+    expense = 0,
+    item;
+  for (var i = 0; i < state.transactions.length; i++) {
+    item = state.transactions[i];
+    if (item.type === "income") {
+      //   income += item.amount;
+      income = income + item.amount;
+    } else if (item.type === "expense") {
+      // expense += item.amount;
+      expense = expense + item.amount;
+    }
+  }
+  balance = income - expense;
+  //   console.log(balance,income,expense);
+  state.balance = balance;
+  state.income = income;
+  state.expense = expense;
+}
+// function Render
+function render() {
+  balanceEl.innerHTML = `$${state.balance}`;
+  incomeEl.innerHTML = `$${state.income}`;
+  expensEl.innerHTML = `$${state.expense}`;
+
+  var transactionEl, containerEl, amountEl, item, btnEl;
   for (var i = 0; i < state.transactions.length; i++) {
     item = state.transactions[i];
     transactionEl = document.createElement("li");
@@ -45,7 +87,7 @@ function init() {
       amountEl.classList.add("expense-amt");
     }
     amountEl.innerHTML = `$${item.amount}`;
-    console.log(amountEl);
+    // console.log(amountEl);
     containerEl.appendChild(amountEl);
     btnEl = document.createElement("button");
     btnEl.innerHTML = "X";
@@ -53,4 +95,5 @@ function init() {
     transactionEl.appendChild(containerEl);
   }
 }
+
 init();

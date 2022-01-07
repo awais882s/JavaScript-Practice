@@ -62,7 +62,7 @@ h2 {
   margin-bottom: 10px;
   box-shadow: var(--drop-shadow);
 }
-#transaction li span{
+#transaction li span {
   display: inline-block;
   color: white;
   padding: 5px;
