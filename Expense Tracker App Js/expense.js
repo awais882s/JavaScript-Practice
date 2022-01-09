@@ -34,6 +34,10 @@ var expenseBtnEl = document.querySelector("#expenseBtn");
 var nameInputEl = document.querySelector("#name");
 var amountInputEl = document.querySelector("#amount");
 function init() {
+  var localState = JSON.parse(localStorage.getItem("expenseTrackerState"));
+  if (localState !== null) {
+    state = localState;
+  }
   updateState();
   initListeners();
 }
@@ -110,6 +114,9 @@ function updateState() {
   state.balance = balance;
   state.income = income;
   state.expense = expense;
+  // use local storage to add some data =======================================================================================
+
+  localStorage.setItem("expenseTrackerState", JSON.stringify(state));
   render();
 }
 // function Render==============================================================================
