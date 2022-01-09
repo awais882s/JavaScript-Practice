@@ -62,8 +62,8 @@ function addTransaction(name, amount, type) {
     var transaction = {
       id: uniqueId(),
       name: name,
-      amount: amount,
-      type: type,
+      amount: parseInt(amount),
+      type: type
     };
     state.transactions.push(transaction);
     updateState();
@@ -102,8 +102,8 @@ function updateState() {
   for (var i = 0; i < state.transactions.length; i++) {
     item = state.transactions[i];
     if (item.type === "income") {
-      //   income += item.amount;
-      income = income + item.amount;
+        income += item.amount;
+      // income = income + item.amount;
     } else if (item.type === "expense") {
       // expense += item.amount;
       expense = expense + item.amount;
