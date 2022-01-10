@@ -39,22 +39,36 @@ function initListeners() {
 }
 function onAddIncomeClick() {
   var name = nameInputEl.value;
-  var amount = amountInputEl.value;
-  if (name!=="" && amount!=="") {
-    
+  var amount = parseInt(amountInputEl.value);
+  if (name !== "" && amount !== "") {
+    var transaction = {
+      name: nameInputEl.value,
+      amount: parseInt(amountInputEl.value),
+      type: "income",
+    };
+    state.transactions.push(transaction);
+    console.log(state);
+    updateState();
+  } else {
+    alert("Please Enter a Vaild Data");
   }
   // console.log("income", nameInputEl.value, amountInputEl.value);
-  var transaction = {
-    name: nameInputEl.value,
-    amount: parseInt(amountInputEl.value),
-    type: "income",
-  };
-  state.transactions.push(transaction);
-  console.log(state);
-  updateState();
 }
 function onAddExpenseClick() {
-  console.log("expense", nameInputEl.value, amountInputEl.value);
+  var name = nameInputEl.value;
+  var amount = parseInt(amountInputEl.value);
+  if (name !== "" && amount !== "") {
+    var transaction = {
+      name: nameInputEl.value,
+      amount: parseInt(amountInputEl.value),
+      type: "expense",
+    };
+    state.transactions.push(transaction);
+    console.log(state);
+    updateState();
+  } else {
+    alert("Please Enter a Vaild Data");
+  }
 }
 
 function updateState() {
