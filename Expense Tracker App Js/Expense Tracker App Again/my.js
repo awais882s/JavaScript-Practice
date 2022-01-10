@@ -38,37 +38,25 @@ function initListeners() {
   expenseBtnEl.addEventListener("click", onAddExpenseClick);
 }
 function onAddIncomeClick() {
+  AddTransactions(nameInputEl.value, amountInputEl.value, "income");
+}
+function AddTransactions(name, amount, type) {
   var name = nameInputEl.value;
   var amount = parseInt(amountInputEl.value);
   if (name !== "" && amount !== "") {
     var transaction = {
-      name: nameInputEl.value,
-      amount: parseInt(amountInputEl.value),
-      type: "income",
+      name: name,
+      amount: parseInt(amount),
+      type: type,
     };
     state.transactions.push(transaction);
-    console.log(state);
     updateState();
   } else {
     alert("Please Enter a Vaild Data");
   }
-  // console.log("income", nameInputEl.value, amountInputEl.value);
 }
 function onAddExpenseClick() {
-  var name = nameInputEl.value;
-  var amount = parseInt(amountInputEl.value);
-  if (name !== "" && amount !== "") {
-    var transaction = {
-      name: nameInputEl.value,
-      amount: parseInt(amountInputEl.value),
-      type: "expense",
-    };
-    state.transactions.push(transaction);
-    console.log(state);
-    updateState();
-  } else {
-    alert("Please Enter a Vaild Data");
-  }
+  AddTransactions(nameInputEl.value, amountInputEl.value, "expense");
 }
 
 function updateState() {
