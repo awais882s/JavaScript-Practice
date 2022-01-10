@@ -54,6 +54,8 @@ function AddTransactions(name, amount, type) {
   } else {
     alert("Please Enter a Vaild Data");
   }
+  nameInputEl.value = "";
+  amountInputEl.value = "";
 }
 function onAddExpenseClick() {
   AddTransactions(nameInputEl.value, amountInputEl.value, "expense");
@@ -107,6 +109,8 @@ function render() {
     containerEl.appendChild(amountEl);
     btnEl = document.createElement("button");
     btnEl.innerHTML = "X";
+    
+
     containerEl.appendChild(btnEl);
     transactionEl.appendChild(containerEl);
   }
