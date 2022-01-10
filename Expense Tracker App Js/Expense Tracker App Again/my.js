@@ -4,16 +4,19 @@ var state = {
   expense: 100,
   transactions: [
     {
+      id: uniqueId(),
       name: "Salary",
       amount: 5000,
       type: "income",
     },
     {
+      id: uniqueId(),
       name: "Buy Grocery",
       amount: 50,
       type: "expense",
     },
     {
+      id: uniqueId(),
       name: "Buy Guitar",
       amount: 500,
       type: "expense",
@@ -36,6 +39,9 @@ function init() {
 function initListeners() {
   incomeBtnEl.addEventListener("click", onAddIncomeClick);
   expenseBtnEl.addEventListener("click", onAddExpenseClick);
+}
+function uniqueId() {
+  return Math.round(Math.random() * 1000000);
 }
 function onAddIncomeClick() {
   AddTransactions(nameInputEl.value, amountInputEl.value, "income");
@@ -61,8 +67,16 @@ function onAddExpenseClick() {
   AddTransactions(nameInputEl.value, amountInputEl.value, "expense");
 }
 function onDeleteClick(event) {
-console.log(event);
-  
+  var id = parseInt(event.target.getAttribute("data-id"));
+  var deleteIndex;
+  for (var i = 0; i < state.transactions.length; i++) {
+    if (state.transactions[i].id === id) {
+      deleteIndex = i;
+      break;
+    }
+  }
+  state.transactions.splice(deleteIndex, 1);
+  updateState();
 }
 
 function updateState() {
@@ -112,6 +126,7 @@ function render() {
     amountEl.innerHTML = `$${item.amount}`;
     containerEl.appendChild(amountEl);
     btnEl = document.createElement("button");
+    btnEl.setAttribute("data-id", item.id);
     btnEl.innerHTML = "X";
     btnEl.addEventListener("click", onDeleteClick);
 
