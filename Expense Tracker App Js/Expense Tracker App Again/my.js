@@ -25,10 +25,38 @@ var balanceEl = document.querySelector("#balance");
 var incomeEl = document.querySelector("#income");
 var expenseEl = document.querySelector("#expense");
 var transactionsEl = document.querySelector("#transaction");
+var incomeBtnEl = document.querySelector("#incomeBtn");
+var expenseBtnEl = document.querySelector("#expenseBtn");
+var nameInputEl = document.querySelector("#name");
+var amountInputEl = document.querySelector("#amount");
 function init() {
   updateState();
-  render();
+  initListeners();
 }
+function initListeners() {
+  incomeBtnEl.addEventListener("click", onAddIncomeClick);
+  expenseBtnEl.addEventListener("click", onAddExpenseClick);
+}
+function onAddIncomeClick() {
+  var name = nameInputEl.value;
+  var amount = amountInputEl.value;
+  if (name!=="" && amount!=="") {
+    
+  }
+  // console.log("income", nameInputEl.value, amountInputEl.value);
+  var transaction = {
+    name: nameInputEl.value,
+    amount: parseInt(amountInputEl.value),
+    type: "income",
+  };
+  state.transactions.push(transaction);
+  console.log(state);
+  updateState();
+}
+function onAddExpenseClick() {
+  console.log("expense", nameInputEl.value, amountInputEl.value);
+}
+
 function updateState() {
   var balance = 0,
     income = 0,
@@ -48,6 +76,7 @@ function updateState() {
   state.balance = balance;
   state.income = income;
   state.expense = expense;
+  render();
 }
 function render() {
   balanceEl.innerHTML = `$${state.balance}`;
@@ -55,8 +84,10 @@ function render() {
   expenseEl.innerHTML = `$${state.expense}`;
   //   create a list of variables=====================================================================================
   var transactionEl, containerEl, amountEl, item, btnEl;
+  transactionsEl.innerHTML = "";
   //   for length of transaction check outside of for loop==================================================================
   var tranlen = state.transactions.length;
+
   for (var i = 0; i < tranlen; i++) {
     item = state.transactions[i];
     transactionEl = document.createElement("li");
