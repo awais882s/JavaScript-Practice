@@ -60,6 +60,10 @@ function AddTransactions(name, amount, type) {
 function onAddExpenseClick() {
   AddTransactions(nameInputEl.value, amountInputEl.value, "expense");
 }
+function onDeleteClick(event) {
+console.log(event);
+  
+}
 
 function updateState() {
   var balance = 0,
@@ -109,7 +113,7 @@ function render() {
     containerEl.appendChild(amountEl);
     btnEl = document.createElement("button");
     btnEl.innerHTML = "X";
-    
+    btnEl.addEventListener("click", onDeleteClick);
 
     containerEl.appendChild(btnEl);
     transactionEl.appendChild(containerEl);
