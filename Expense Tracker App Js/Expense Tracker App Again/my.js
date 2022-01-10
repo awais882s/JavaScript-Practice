@@ -3,24 +3,24 @@ var state = {
   income: 400,
   expense: 100,
   transactions: [
-    {
-      id: uniqueId(),
-      name: "Salary",
-      amount: 5000,
-      type: "income",
-    },
-    {
-      id: uniqueId(),
-      name: "Buy Grocery",
-      amount: 50,
-      type: "expense",
-    },
-    {
-      id: uniqueId(),
-      name: "Buy Guitar",
-      amount: 500,
-      type: "expense",
-    },
+    // {
+    //   id: uniqueId(),
+    //   name: "Salary",
+    //   amount: 5000,
+    //   type: "income",
+    // },
+    // {
+    //   id: uniqueId(),
+    //   name: "Buy Grocery",
+    //   amount: 50,
+    //   type: "expense",
+    // },
+    // {
+    //   id: uniqueId(),
+    //   name: "Buy Guitar",
+    //   amount: 500,
+    //   type: "expense",
+    // },
   ],
 };
 // create a init function()=================================================================================================
@@ -51,6 +51,7 @@ function AddTransactions(name, amount, type) {
   var amount = parseInt(amountInputEl.value);
   if (name !== "" && amount !== "") {
     var transaction = {
+      id: uniqueId(),
       name: name,
       amount: parseInt(amount),
       type: type,
