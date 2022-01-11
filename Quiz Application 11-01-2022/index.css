@@ -1,9 +1,28 @@
-fieldset{
-    
-    border-radius: 2em;
-    text-align: justify;
-    background-image: url(https://media.istockphoto.com/photos/big-white-question-mark-on-a-yellow-background-3d-rendering-picture-id1166678206?k=20&m=1166678206&s=612x612&w=0&h=35swXFFtLZ-MTj6dPalgpfPba3aXFJgzDKsDFvGXrUo=);
-    font-size: 25px;
-    object-fit: contain;
-    
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    font-size: 3rem;
+}
+fieldset {
+  border-radius: 2em;
+  text-align: justify;
+  background-image: url("https://t3.ftcdn.net/jpg/02/55/81/40/360_F_255814073_eVeqoLhJQ31uBZ3fcgaaRcYgEtYDkYkF.jpg");
+  font-size: 20px;
+  object-fit: contain;
+  color: white;
+  border-color: #3498db;
+}
+#result {
+  margin-left: 600px;
+  height: auto;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+  background-color:white;
+  width: 8rem;
+  border-radius: 10px;
+  border-color: #e74c3c;
+  border: 2px solid red;
 }

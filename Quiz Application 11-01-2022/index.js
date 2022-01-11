@@ -21,9 +21,9 @@ function check() {
   } else {
     alert("Q2 answer is False");
   }
-  const right_answer_3 = document.getElementById("q3-a1");
+  const right_answer_3 = document.getElementById("q3-a2");
   const q3_answer_2 = document.getElementById("q3-a2");
-  const q3_answer_3 = document.getElementById("q3-a3");
+  const q3_answer_3 = document.getElementById("q3-a1");
   const q3_answer_4 = document.getElementById("q3-a4");
   if (right_answer_3.checked == true) {
     score++;
@@ -31,4 +31,5 @@ function check() {
   } else {
     alert("Q3 answer is False");
   }
+  alert("Your Score is " + score++);
 }
