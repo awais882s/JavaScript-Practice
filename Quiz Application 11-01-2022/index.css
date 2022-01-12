@@ -8,6 +8,7 @@ h1{
 fieldset {
   border-radius: 2em;
   text-align: justify;
+  margin-left: 100px;
   background-image: url("https://t3.ftcdn.net/jpg/02/55/81/40/360_F_255814073_eVeqoLhJQ31uBZ3fcgaaRcYgEtYDkYkF.jpg");
   font-size: 20px;
   object-fit: contain;

@@ -31,5 +31,5 @@ function check() {
   } else {
     alert("Q3 answer is False");
   }
-  alert("Your Score is " + score++);
+  alert("Your Score is " + score++/4);
 }
