@@ -36,3 +36,22 @@ var questionArray = [
 
 
 ];
+function showQuestion(e) {
+    // show questions
+    var questionElement = document.getElementById("questionElement");
+    questionElement.innerHTML = questionArray[e].question;
+    // show options
+    var optionElement = document.getElementsByClassName("optionElement");
+
+    var length = questionArray.length;
+    for (var i = 0; i < length; i++) {
+        optionElement[i].innerHTML = questionArray[e].options[i];
+    }
+
+}
+var questioncount = 0;
+function nextQuestion() {
+    // var nextBtn = document.getElementById("nextBtn");
+    questioncount++;
+    showQuestion(questioncount);
+}
