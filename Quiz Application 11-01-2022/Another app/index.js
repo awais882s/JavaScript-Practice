@@ -1,6 +1,6 @@
 var questionsArray = [
     {
-        question: "Full form of RAM is?",
+        Q: "Full form of RAM is?",
         answer: "Random Access Memory",
         options: [
             "Random Access Memory",
@@ -10,7 +10,7 @@ var questionsArray = [
         ],
     },
     {
-        question: "FULL FORM OF : C P U?",
+        Q: "FULL FORM OF : C P U?",
         answer: "CENTRAL PROCESSING UNIT",
         options: [
             " CONTROL PROCESING UNIT",
@@ -21,7 +21,7 @@ var questionsArray = [
 
     },
     {
-        question: "SEO stands for",
+        Q: "SEO stands for",
         answer: " None of the above",
         options: [
             " Search Engine Optimum",
@@ -35,7 +35,7 @@ var questionsArray = [
 function showQuestion(e) {
     // show questions
     var questionElement = document.getElementById("questionElement");
-    questionElement.innerHTML = questionsArray[e].question;
+    questionElement.innerHTML = questionsArray[e].Q;
     // show options
     var optionElement = document.getElementsByClassName("optionElement");
     var length = optionElement.length;
@@ -51,6 +51,8 @@ function nextQuestion() {
     questionCount++;
     showQuestion(questionCount);
 }
-function putActiveClass() {
+function putActive(e) {
+    var optionElement = document.getElementsByClassName("optionElement");
+    e.classlist.add("active");
     
 }

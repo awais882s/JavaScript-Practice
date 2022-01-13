@@ -15,7 +15,7 @@
   </head>
 
   <body onload="showQuestion()">
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
@@ -28,10 +28,18 @@
               <h5 class="card-title pb-3" id="questionElement">
                 Q1. Question one goes here
               </h5>
-              <p class="card-text optionElement p-2">Option 1 goes here</p>
-              <p class="card-text optionElement p-2">Option 2 goes here</p>
-              <p class="card-text optionElement p-2">Option 3 goes here</p>
-              <p class="card-text optionElement p-2">Option 4 goes here</p>
+              <p class="card-text optionElement p-2" onclick="putActive(this)">
+                Option 1 goes here
+              </p>
+              <p class="card-text optionElement p-2" onclick="putActive(this)">
+                Option 2 goes here
+              </p>
+              <p class="card-text optionElement p-2" onclick="putActive(this)">
+                Option 3 goes here
+              </p>
+              <p class="card-text optionElement p-2" onclick="putActive(this)">
+                Option 4 goes here
+              </p>
             </div>
             <div class="card-footer text-muted text-right">
               <a
