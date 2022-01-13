@@ -1,5 +1,4 @@
-console.log("my quiz app");
-var questionArray = [
+var questionsArray = [
     {
         question: "Full form of RAM is?",
         answer: "Random Access Memory",
@@ -32,26 +31,26 @@ var questionArray = [
         ],
 
     }
-
-
-
 ];
 function showQuestion(e) {
     // show questions
     var questionElement = document.getElementById("questionElement");
-    questionElement.innerHTML = questionArray[e].question;
+    questionElement.innerHTML = questionsArray[e].question;
     // show options
     var optionElement = document.getElementsByClassName("optionElement");
+    var length = optionElement.length;
 
-    var length = questionArray.length;
     for (var i = 0; i < length; i++) {
-        optionElement[i].innerHTML = questionArray[e].options[i];
+        optionElement[i].innerHTML = questionsArray[e].options[i];
     }
 
 }
-var questioncount = 0;
+var questionCount = 0;
 function nextQuestion() {
     // var nextBtn = document.getElementById("nextBtn");
-    questioncount++;
-    showQuestion(questioncount);
+    questionCount++;
+    showQuestion(questionCount);
+}
+function putActiveClass() {
+    
 }
