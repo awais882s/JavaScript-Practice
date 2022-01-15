@@ -12,18 +12,24 @@ console.log(getText);
 getText.addEventListener("dblclick", func1);
 function func1() {
   let createInputElem = document.createElement("input");
-  createInputElem.id = "createinputElem";
+  createInputElem.id = "createInputElem";
   createInputElem.type = "text";
   createInputElem.innerText = "";
   createElem.appendChild(createInputElem);
+  // ========================================================part3
+  let getTextValue = document.getElementById("createInputElem");
+getTextValue = addEventListener("click", func2);
+function func2() {
+  let getValueof = createInputElem.value;
+  localStorage.setItem("Data Entered", getValueof);
 }
-
+}
 
 // Part-3 :and whenever user clicks away(blur). save the note into the local storage.===================
 
-let getTextValue = document.getElementById("createinputElem");
-getTextValue.addEventListener("click", func2);
-function func2() {
-  let getValueof = createinputElem.value;
-  localStorage.setItem("Data Entered", getValueof);
-}
+// let getTextValue = document.getElementById("createInputElem");
+// getTextValue = addEventListener("click", func2);
+// function func2() {
+//   let getValueof = createInputElem.value;
+//   localStorage.setItem("Data Entered", getValueof);
+// }
