@@ -14,7 +14,10 @@ z = Math.E;
 // z = Math.floor(5.1);
 z = Math.ceil(5.3);
 z = Math.abs(-5.3);
-
+z = Math.sqrt(49);
+z = Math.pow(2,3);
+z = Math.min(2,3.364,49,989);
+z = Math.max(2,3.364,49,989);
 console.log(z);
 
 // 3
