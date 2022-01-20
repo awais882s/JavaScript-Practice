@@ -18,4 +18,6 @@ a = otherDate.getTime();
 a = otherDate.getMonth();
 console.log(a);
 otherDate.setDate(23);
+otherDate.setMonth(11);
+otherDate.setFullYear(2021);
 console.log(otherDate);
