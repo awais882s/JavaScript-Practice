@@ -26,4 +26,9 @@ divElem.addEventListener("click", function () {
     let html = elem.innerHTML;
     divElem.innerHTML = `<textarea class=" textarea form-control" id = "textarea" rows="3">${html}</textarea>`;
   }
+  // listen for the blur event on textarea
+  let textarea = document.getElementById("textarea");
+  textarea.addEventListener("blur", function () {
+    elem.innerHTML = textarea.value;
+  });
 });
