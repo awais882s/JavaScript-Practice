@@ -3,7 +3,14 @@ console.log("Div editable");
 let divElem = document.createElement("div");
 
 // add text in that created element
-let text = document.createTextNode("This is my element. click to edit it");
+let val = localStorage.getItem("text");
+let text;
+if (val == null) {
+  text = document.createTextNode("This is my element. click to edit it");
+} else {
+  text = document.createTextNode(val);
+}
+
 divElem.appendChild(text);
 divElem.setAttribute("class", "elem");
 divElem.setAttribute("id", "elem");
@@ -30,5 +37,6 @@ divElem.addEventListener("click", function () {
   let textarea = document.getElementById("textarea");
   textarea.addEventListener("blur", function () {
     elem.innerHTML = textarea.value;
+    localStorage.setItem("text", textarea.value);
   });
 });
