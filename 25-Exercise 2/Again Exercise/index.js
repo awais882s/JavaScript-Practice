@@ -25,6 +25,9 @@ divElem.addEventListener("click", function () {
     console.log(html);
     divElem.innerHTML = `<textarea class=" textarea form-control" id = "textarea"  rows="3">${html}</textarea>`;
   }
-//   for blur
+  //   for blur
+  let textarea = document.getElementById("textarea");
+  textarea.addEventListener("blur", function () {
+    divElem.innerHTML = textarea.value;
+  });
 });
-
