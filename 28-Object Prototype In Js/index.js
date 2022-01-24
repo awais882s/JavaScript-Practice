@@ -16,4 +16,4 @@ obj.prototype.setName = function (newName) {
 };
 
 let obj2 = new obj("Chasmato");
-console.log(obj2.toString);
+console.log(obj2);
