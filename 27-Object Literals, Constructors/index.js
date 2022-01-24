@@ -12,14 +12,20 @@ console.log(car);
 // new Date();
 
 // creating a constructor for cars
-function GeneralCar(givenName, givenSpeed) {
+function generalCar(givenName, givenSpeed) {
   this.name = givenName;
-  this.topSpeed = givenSpeed;
+  this.topSpeed = parseInt(givenSpeed);
   this.run = function () {
     console.log(`${this.name}is running`);
   };
+  this.analyze = function () {
+    console.log(
+      `This car is slower by ${200 - this.topSpeed}Km/H than AutoCar`
+    );
+  };
 }
-car1 = new GeneralCar("Nissan", 180);
-car2 = new GeneralCar("AutoCar", "200km");
-console.log(car1);
-console.log(car2);
+car_1 = new generalCar("Nissan", "180Km");
+car_2 = new generalCar("AutoCar", "200Km");
+
+console.log(car_1);
+console.log(car_2);
