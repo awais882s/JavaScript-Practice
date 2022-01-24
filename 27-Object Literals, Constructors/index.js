@@ -26,6 +26,6 @@ function generalCar(givenName, givenSpeed) {
 }
 car_1 = new generalCar("Nissan", "180Km");
 car_2 = new generalCar("AutoCar", "200Km");
+car_3 = new generalCar("Mercedes", "300km");
 
-console.log(car_1);
-console.log(car_2);
+console.log(car_1, car_2, car_3);
