@@ -11,8 +11,9 @@ function obj(givenName) {
 obj.prototype.getName = function () {
   return this.name;
 };
-
-
+obj.prototype.setName = function (newName) {
+  return (this.name = newName);
+};
 
 let obj2 = new obj("Chasmato");
 console.log(obj2.toString);
