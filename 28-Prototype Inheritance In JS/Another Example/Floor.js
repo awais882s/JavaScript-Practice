@@ -17,8 +17,15 @@ console.log(make.slogan());
 
 // cake
 
-function cake(egg, bakingpowder, shitesugar, water, over) {
+function cake(egg, bakingpowder, whitesugar, water, oven) {
   Flour.call(this, egg, bakingpowder, whitesugar);
   this.water = water;
   this.over = oven;
 }
+
+// Manually set the constructor
+
+cake.prototype.constructor = cake;
+
+let cook = new cake(4, 500, 700, 500, 4);
+console.log(cook);
