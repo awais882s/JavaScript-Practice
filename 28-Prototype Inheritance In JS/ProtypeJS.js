@@ -52,8 +52,10 @@ function Programmer(name, salary, experience, language) {
 // Inherit the prototype
 
 Programmer.prototype = Object.create(Employee.prototype);
+
 // Manually set the constructor
 Programmer.prototype.consstructor = Programmer;
+
 
 let Chasmato = new Programmer("chasmato", "10", 3, "Javascript");
 console.log(Chasmato);
