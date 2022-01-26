@@ -128,3 +128,5 @@ class Lover extends YourLovePersonsName {
 
 let KAMRAN = new Lover("Kamran_Gujjar","KamiBhai",20,"S");
 console.log(KAMRAN);
+
+
