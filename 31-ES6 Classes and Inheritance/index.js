@@ -17,8 +17,27 @@ class Employee {
   }
 }
 
+class Programmer extends Employee {
+  constructor(givenName, givenExperience, givenDivision, language, github) {
+    super(givenName, givenExperience, givenDivision);
+    this.language = language;
+    this.github = github;
+  }
+  favLang() {
+    if (this.favLang == "python") {
+      return "Python";
+    } else {
+      return "Javascript";
+    }
+  }
+  static multiply(a, b) {
+    return a * b;
+  }
+}
+
 awais = new Employee("awais", 56, "Division");
 console.log(awais.joiningYear());
 
 console.log(Employee.add(34, 5));
+
 
