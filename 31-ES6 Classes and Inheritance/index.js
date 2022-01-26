@@ -64,25 +64,25 @@ let { name, age } = person; // Object destructuring assignment
 console.log(name, age);
 // any other example
 
-let frnd = { name1:"my chasmato", age1: 21 };
+let frnd = { name1: "my chasmato", age1: 21 };
 let { name1, age1 } = frnd;
 console.log(name1);
 
 //  Enhanced Object Literals
 
 function getMobile(manufacturer, model, year) {
-    return {
-       manufacturer,
-       model,
-       year
-    }
- }
- getMobile("Samsung", "Galaxy", "2020");
+  return {
+    manufacturer,
+    model,
+    year,
+  };
+}
+getMobile("Samsung", "Galaxy", "2020");
 //   Promises
 
- var asyncCall =  new Promise((resolve, reject) => {
-    // do something
-    resolve();
- }).then(()=> {   
-    console.log('DON!');
- })
+var asyncCall = new Promise((resolve, reject) => {
+  // do something
+  resolve();
+}).then(() => {
+  console.log("DON!");
+});
