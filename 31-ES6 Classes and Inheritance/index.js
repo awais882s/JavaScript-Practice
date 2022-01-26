@@ -57,3 +57,14 @@ let lang = ["python", "java", "c++"];
 let [x, y, z] = lang;
 console.log(x, y, z);
 console.log(x);
+
+//Object Destructuring
+let person = { name: "Peter", age: 28 };
+let { name, age } = person; // Object destructuring assignment
+console.log(name, age);
+// any other example
+
+let frnd = { name1:"my chasmato", age1: 21 };
+let { name1, age1 } = frnd;
+console.log(name1);
+
