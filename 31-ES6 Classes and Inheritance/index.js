@@ -45,3 +45,15 @@ console.log(awais);
 console.log(awais.favLang());
 console.log(Programmer.multiply(5, 7));
 console.log(awais.favLang());
+
+// advanced Es6 features
+
+let fruits = ["Apple", "Banana"];
+let [a, b] = fruits; // Array destructuring assignment
+console.log(a, b);
+
+// another exampl
+let lang = ["python", "java", "c++"];
+let [x, y, z] = lang;
+console.log(x, y, z);
+console.log(x);
