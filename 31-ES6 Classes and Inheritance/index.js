@@ -44,4 +44,4 @@ awais = new Programmer("Chasmato", 3, "Lays", "Go", "AWAIS882s");
 console.log(awais);
 console.log(awais.favLang());
 console.log(Programmer.multiply(5, 7));
-console.log(Programmer);
+console.log(awais.favLang());
