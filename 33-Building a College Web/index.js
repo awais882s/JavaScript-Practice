@@ -36,6 +36,8 @@ function libraryFormSubmit(e) {
   }
   let book = new Book(name, author, type);
   console.log(book);
-  // let type = document.getElementById("").value;
+  let display = new Display();
+  display.add(book);
+  display.clear();
   e.preventDefault();
 }
