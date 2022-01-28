@@ -13,8 +13,15 @@ function Book(name, author, type) {
 function Display() {}
 
 //  add methods to display prototype
-Display.prototype.add = function () {
+Display.prototype.add = function (book) {
   console.log("Adding to UI");
+  let tableBody = document.getElementById("tableBody");
+  let uiString = `<tr>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+  `;
 };
 
 Display.prototype.clear = function () {
