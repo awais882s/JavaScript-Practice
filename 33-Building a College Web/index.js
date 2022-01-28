@@ -17,11 +17,11 @@ Display.prototype.add = function (book) {
   console.log("Adding to UI");
   let tableBody = document.getElementById("tableBody");
   let uiString = `<tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-  `;
+              <td>${book.name}</td>
+              <td>${book.author}</td>
+              <td>${book.type}</td>
+            </tr>`;
+  tableBody.innerHTML += uiString;
 };
 
 Display.prototype.clear = function () {
