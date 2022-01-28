@@ -19,7 +19,7 @@ let libraryForm = document.getElementById("libraryForm");
 libraryForm.addEventListener("submit", libraryFormSubmit);
 function libraryFormSubmit(e) {
   console.log("you have submitted library form");
-  let book = new Book(name, author, type);
+
   let name = document.getElementById("bookName").value;
   let author = document.getElementById("author").value;
 
@@ -29,8 +29,13 @@ function libraryFormSubmit(e) {
   let type;
   if (fiction.checked) {
     type = fiction.value;
+  } else if (programming.checked) {
+    type = programming.value;
+  } else if (cooking.checked) {
+    type = cooking.value;
   }
-
+  let book = new Book(name, author, type);
+  console.log(book);
   // let type = document.getElementById("").value;
   e.preventDefault();
 }
