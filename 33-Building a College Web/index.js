@@ -18,6 +18,19 @@ function Display() {}
 let libraryForm = document.getElementById("libraryForm");
 libraryForm.addEventListener("submit", libraryFormSubmit);
 function libraryFormSubmit(e) {
-  e.preventDefault();
   console.log("you have submitted library form");
+  let book = new Book(name, author, type);
+  let name = document.getElementById("bookName").value;
+  let author = document.getElementById("author").value;
+
+  let fiction = document.getElementById("fiction");
+  let programming = document.getElementById("programming");
+  let cooking = document.getElementById("cooking");
+  let type;
+  if (fiction.checked) {
+    type = fiction.value;
+  }
+
+  // let type = document.getElementById("").value;
+  e.preventDefault();
 }
