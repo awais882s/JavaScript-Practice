@@ -13,6 +13,14 @@ function Book(name, author, type) {
 function Display() {}
 
 //  add methods to display prototype
+Display.prototype.add = function () {
+  console.log("Adding to UI");
+};
+
+Display.prototype.clear = function () {
+  let libraryForm = document.getElementById("libraryForm");
+  libraryForm.reset();
+};
 
 //  add submit event listeners to libraryForm
 let libraryForm = document.getElementById("libraryForm");
