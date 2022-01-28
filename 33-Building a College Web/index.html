@@ -19,7 +19,7 @@
     <nav class="navbar navbar-dark bg-dark">
       <div class="container-fluid">
         <a class="navbar-brand">Awais Library</a>
-        <form class="d-flex">
+        <form>
           <input
             class="form-control me-2"
             type="search"
@@ -33,7 +33,7 @@
     <div class="container my-3">
       <h1>AWAIS LIBRARY</h1>
       <hr />
-      <form>
+      <form id="libraryForm">
         <div class="row mb-3">
           <label for="bookName" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
@@ -95,7 +95,8 @@
           </div>
         </fieldset>
         <button type="submit" class="btn btn-primary">Add Book</button>
-      </form><br>
+      </form>
+      <br />
       <div id="table">
         <h1>Your Books</h1>
         <table class="table">
