@@ -26,7 +26,7 @@
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-danger" type="submit">Search</button>
+          <button class="btn btn-warning" type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -36,83 +36,81 @@
       <hr />
       <form id="libraryForm">
         <div class="row mb-3">
-          <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+          <label for="bookName" class="col-sm-2 col-form-label">Name:</label>
           <div class="col-sm-10">
             <input
               type="text"
               class="form-control"
-              id="bookName"
-              placeholder="Book Name"
+              id="Name"
+              placeholder="Please Enter Your Name"
             />
           </div>
         </div>
         <div class="row mb-3">
-          <label for="Author" class="col-sm-2 col-form-label">Author</label>
+          <label for="Author" class="col-sm-2 col-form-label">Your City:</label>
           <div class="col-sm-10">
             <input
               type="text"
               class="form-control"
-              id="author"
-              placeholder="Author"
+              id="city"
+              placeholder="Please Enter Your City Name"
             />
           </div>
         </div>
         <fieldset class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+          <legend class="col-form-label col-sm-2 pt-0">Your Province:</legend>
           <div class="col-sm-10">
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="radio"
                 name="type"
-                id="fiction"
-                value="Fiction"
+                id="punjab"
+                value="punjab"
                 checked
               />
-              <label class="form-check-label" for="fiction"> Fiction </label>
+              <label class="form-check-label" for="punjab"> PUNJAB </label>
             </div>
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="radio"
                 name="type"
-                id="programming"
-                value="Programming"
+                id="sindh"
+                value="sindh"
               />
-              <label class="form-check-label" for="programming">
-                Computer Programming
-              </label>
+              <label class="form-check-label" for="sindh"> SINDH </label>
             </div>
             <div class="form-check disabled">
               <input
                 class="form-check-input"
                 type="radio"
                 name="type"
-                id="cooking"
-                value="cooking"
+                id="kashmir"
+                value="kashmir"
               />
-              <label class="form-check-label" for="cooking"> Cooking </label>
+              <label class="form-check-label" for="kashmir"> KASHMIR </label>
             </div>
           </div>
         </fieldset>
-        <button type="submit" class="btn btn-primary">Add Book</button>
+        <button type="submit" class="btn btn-info">Submit Data</button>
       </form>
       <br />
       <div id="table">
-        <h1>Your Books</h1>
+        <h1>Your Records:</h1>
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Author</th>
-              <th scope="col">Type</th>
+              <th scope="col">Your Name:</th>
+              <th scope="col">Your City Name:</th>
+              <th scope="col">Your Province:</th>
             </tr>
           </thead>
           <tbody id="tableBody">
             <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>Awais</td>
+              <td>Okara</td>
+              <td>Punjab</td>
             </tr>
           </tbody>
         </table>
