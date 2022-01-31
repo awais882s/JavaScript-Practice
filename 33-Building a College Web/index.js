@@ -45,6 +45,9 @@ Display.prototype.show = function (type, displayMessage) {
                         <strong>Message:</strong> ${displayMessage}
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>`;
+  setTimeout(() => {
+    message.innerHTML = "";
+  }, 2000);
 };
 
 //  add submit event listeners to libraryForm
