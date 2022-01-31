@@ -1,5 +1,10 @@
 console.log("Building a College Library Website ");
 
+// Todos
+// 1.store all data to the local storage
+// 2.Give another column as an option to delete the book
+// 3.Add a scroll bar to the view 
+
 // constructor
 
 function Book(name, author, type) {
@@ -10,7 +15,9 @@ function Book(name, author, type) {
 
 // Display constructor
 
-function Display() {}
+function Display() {
+  
+}
 
 //  add methods to display prototype
 Display.prototype.add = function (book) {
