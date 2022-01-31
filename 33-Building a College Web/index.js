@@ -23,10 +23,28 @@ Display.prototype.add = function (book) {
             </tr>`;
   tableBody.innerHTML += uiString;
 };
-
+// Implement the clear function
 Display.prototype.clear = function () {
   let libraryForm = document.getElementById("libraryForm");
   libraryForm.reset();
+};
+
+// Implement the validate function
+Display.prototype.validate = function (book) {
+  if (book.name.length < 2 || book.author.length < 2) {
+    return false;
+  } else {
+    return true;
+  }
+  libraryForm.reset();
+};
+
+Display.prototype.show = function (type,message) {
+  let message = document.getElementById("message");
+  message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                        <strong>Message:</strong>${message}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>`;
 };
 
 //  add submit event listeners to libraryForm
@@ -52,7 +70,14 @@ function libraryFormSubmit(e) {
   let book = new Book(name, author, type);
   console.log(book);
   let display = new Display();
-  display.add(book);
-  display.clear();
+  if (display.validate(book)) {
+    display.add(book);
+    display.clear();
+    display.show("success");
+  } else {
+    // show error to the user
+    display.show("danger","soory you cannot add this book");
+  }
+
   e.preventDefault();
 }
