@@ -1,8 +1,11 @@
 console.log("Async and Sync");
-for (let index = 0; index < 10000; index++) {
-  const element = index;
-  console.log(element);
-  console.log("This is index number " + index);
-}
+
+setTimeout(() => {
+  for (let index = 0; index < 100; index++) {
+    const element = index;
+    console.log(element);
+    console.log("This is index number " + index);
+  }
+}, 100);
 
 console.log("Done Printing");
