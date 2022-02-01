@@ -58,6 +58,7 @@ Display.prototype.show = function (type, DisplayMessage) {
     message.innerHTML = "";
   }, 5000);
 };
+
 // add submit event listeners on InformationForm
 
 let InformationForm = document.getElementById("InformationForm");
