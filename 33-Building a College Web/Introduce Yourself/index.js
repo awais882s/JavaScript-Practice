@@ -55,8 +55,15 @@ function InformationFormSubmit(e) {
   let information = new Information(name, city, province);
   console.log(information);
   let display = new Display();
-  display.add(information);
-  display.clear();
+
+  if (display.validate(information)) {
+    display.add(information);
+    display.clear();
+    display.show("Success", "Your Information Has been Added");
+  } else {
+    // aleart error to the user
+    display.show("danger", "Soory You Cannot add Empty Values");
+  }
   console.log("Thanks for Submit Your Data");
   e.preventDefault();
 }
