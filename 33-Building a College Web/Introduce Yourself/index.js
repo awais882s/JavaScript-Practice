@@ -32,7 +32,15 @@ Display.prototype.clear = function () {
   let InformationForm = document.getElementById("InformationForm");
   InformationForm.reset();
 };
-
+// Implement The Validate Function
+Display.prototype.validate = function (information) {
+  if (information.name.length < 2 || information.city.length < 2) {
+    return false;
+  } else {
+    return true;
+  }
+  InformationForm.reset();
+};
 // add submit event listeners on InformationForm
 
 let InformationForm = document.getElementById("InformationForm");
