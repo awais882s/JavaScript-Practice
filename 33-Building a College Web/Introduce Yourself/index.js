@@ -7,13 +7,39 @@ function Information(name, city, province) {
   this.province = province;
 }
 
+function Display() {}
+
+Display.prototype.add = function (information) {
+  console.log("Adding UI");
+  let tableBody = document.getElementById("tableBody");
+  // 1st method
+  // let uiString = ` <tr>
+  //                   <td>${information.name}</td>
+  //                   <td>${information.city}</td>
+  //                   <td>${information.province}</td>
+  //                 </tr>`;
+  // tableBody.innerHTML = uiString;
+  // 2nd method
+  tableBody.innerHTML = `
+  <tr>
+                    <td>${information.name}</td>
+                    <td>${information.city}</td>
+                    <td>${information.province}</td>
+                  </tr>`;
+};
+// implementation the clear methods
+Display.prototype.clear = function () {
+  let InformationForm = document.getElementById("InformationForm");
+  InformationForm.reset();
+};
+
 // add submit event listeners on InformationForm
 
 let InformationForm = document.getElementById("InformationForm");
 InformationForm.addEventListener("submit", InformationFormSubmit);
 function InformationFormSubmit(e) {
-  let name = document.getElementById("name");
-  let city = document.getElementById("city");
+  let name = document.getElementById("Name").value;
+  let city = document.getElementById("city").value;
 
   let punjab = document.getElementById("punjab");
   let sindh = document.getElementById("sindh");
@@ -21,7 +47,16 @@ function InformationFormSubmit(e) {
   let province;
   if (punjab.checked) {
     province = punjab.value;
+  } else if (sindh.checked) {
+    province = sindh.value;
+  } else if (kashmir.checked) {
+    province = kashmir.value;
   }
-  //   console.log("Thanks for Submit Your Data");
+  let information = new Information(name, city, province);
+  console.log(information);
+  let display = new Display();
+  display.add(information);
+  display.clear();
+  console.log("Thanks for Submit Your Data");
   e.preventDefault();
 }
