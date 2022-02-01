@@ -13,19 +13,19 @@ Display.prototype.add = function (information) {
   console.log("Adding UI");
   let tableBody = document.getElementById("tableBody");
   // 1st method
-  // let uiString = ` <tr>
-  //                   <td>${information.name}</td>
-  //                   <td>${information.city}</td>
-  //                   <td>${information.province}</td>
-  //                 </tr>`;
-  // tableBody.innerHTML = uiString;
-  // 2nd method
-  tableBody.innerHTML = `
-  <tr>
+  let uiString = ` <tr>
                     <td>${information.name}</td>
                     <td>${information.city}</td>
                     <td>${information.province}</td>
                   </tr>`;
+  tableBody.innerHTML += uiString;
+  // 2nd method
+  // tableBody.innerHTML = `
+  // <tr>
+  //                   <td>${information.name}</td>
+  //                   <td>${information.city}</td>
+  //                   <td>${information.province}</td>
+  //                 </tr>`;
 };
 // implementation the clear methods
 Display.prototype.clear = function () {
@@ -40,6 +40,23 @@ Display.prototype.validate = function (information) {
     return true;
   }
   InformationForm.reset();
+};
+
+Display.prototype.show = function (type, DisplayMessage) {
+  let message = document.getElementById("message");
+  let boldText;
+  if (type === "success") {
+    boldText = "Success...!";
+  } else {
+    boldText = "Error...!";
+  }
+  message.innerHTML = `<div class="alert alert-${type} alert-dismissible fade show" role="alert">
+  <strong>${boldText}</strong>${DisplayMessage}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`;
+  setTimeout(() => {
+    message.innerHTML = "";
+  }, 5000);
 };
 // add submit event listeners on InformationForm
 
@@ -67,7 +84,7 @@ function InformationFormSubmit(e) {
   if (display.validate(information)) {
     display.add(information);
     display.clear();
-    display.show("Success", "Your Information Has been Added");
+    display.show("success", "Your Information Has been Added");
   } else {
     // aleart error to the user
     display.show("danger", "Soory You Cannot add Empty Values");
