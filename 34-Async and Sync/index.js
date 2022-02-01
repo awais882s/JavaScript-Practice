@@ -6,6 +6,6 @@ setTimeout(() => {
     console.log(element);
     console.log("This is index number " + index);
   }
-}, 100);
+}, 10);
 
 console.log("Done Printing");
