@@ -9,7 +9,10 @@ function buttonClickHandler() {
 
   //   open the object
   //   xhr.open("GET", "awais.txt", true); for get request
-  xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+  //   xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+  //   Use this for POST request
+  xhr.open("POST", "http://dummy.restapiexample.com/api/v1/create", true);
+  xhr.getResponseHeader("content-type", "application/x-www-form-urlencoded");
 
   //   what to do on progress (optional)
   xhr.onprogress = function () {
@@ -29,6 +32,10 @@ function buttonClickHandler() {
     }
   };
   //   send the request
-  xhr.send();
+  params = "name = test&salary=123&age=23";
+  xhr.send(params);
   console.log("We are Done");
 }
+
+let popBtn = document.getElementById("fetchBtn");
+popBtn.addEventListener("click",popHandler);
