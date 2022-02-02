@@ -37,5 +37,37 @@ function buttonClickHandler() {
   console.log("We are Done");
 }
 
-let popBtn = document.getElementById("fetchBtn");
-popBtn.addEventListener("click",popHandler);
+let popBtn = document.getElementById("popBtn");
+popBtn.addEventListener("click", popHandler);
+function popHandler(params) {
+  console.log("You have Clicked the pop Handler");
+  // instantiate an xhr object
+  const xhr = new XMLHttpRequest();
+
+  //   open the object
+  //   xhr.open("GET", "awais.txt", true); for get request
+  xhr.open("GET", "https://dummyjson.com/products", true);
+
+  //   xhr.onreadystatechange = function () {
+  //     console.log("ready state is", xhr.readyState);
+  //   };
+
+  //   what to do when response is ready
+  xhr.onload = function () {
+    if (this.status === 200) {
+      let obj = JSON.parse(this.responseText);
+      console.log(obj);
+      let list = document.getElementById("list");
+      str = "";
+      for (key in obj) {
+        str += `<li>${obj[key].name}</li>`;
+      }
+      list.innerHTML = str;
+    } else {
+      console.log("Some error ocurred");
+    }
+  };
+  //   send the request
+  xhr.send();
+  console.log("We are Done fetching Employees!");
+}
