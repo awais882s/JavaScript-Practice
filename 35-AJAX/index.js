@@ -8,7 +8,7 @@ function buttonClickHandler() {
   const xhr = new XMLHttpRequest();
 
   //   open the object
-  xhr.open("GET", "harry.txt", true);
+  xhr.open("GET", "awais.txt", true);
 
   //   what to do on progress (optional)
   xhr.onprogress = function () {
@@ -19,4 +19,6 @@ function buttonClickHandler() {
   xhr.onload = function () {
     console.log(this.responseText);
   };
+  //   send the request
+  xhr.send();
 }
