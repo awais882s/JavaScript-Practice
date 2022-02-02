@@ -60,7 +60,7 @@ function popHandler(params) {
       let list = document.getElementById("list");
       str = "";
       for (key in obj) {
-        str += `<li>${obj[key].name}</li>`;
+        str += `<li>${obj[key].products}</li>`;
       }
       list.innerHTML = str;
     } else {
