@@ -16,7 +16,8 @@ function getStudent() {
   setTimeout(function () {
     let str = "";
     students.forEach(function (student) {
-      str += `<li>${student.name}</li>`;
+      str += `<li>${student.name}</li>\n
+    <li>${student.subject}</li>`;
     });
     document.getElementById("students").innerHTML = str;
     console.log("Student has been fethched");
