@@ -10,3 +10,16 @@ const funB = () => {
 
 funA();
 funB();
+
+const personOne = (friend, callfrnd) => {
+  console.log(
+    `I am busy right now. I am talking to other ${friend} .I will Call You Back`
+  );
+  callfrnd();
+};
+const personTwo = () => {
+  console.log("Hey whatsappp. I call back you dekha.");
+};
+
+personOne("AWAIS", personTwo);
+// personTwo();
