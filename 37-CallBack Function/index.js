@@ -8,7 +8,8 @@ const students = [
 function enrollStudent(student) {
   setTimeout(function () {
     students.push(student);
-  }, 3000);
+    console.log("Student has been enrolled");
+  }, 8000);
 }
 function getStudent() {
   setTimeout(function () {
@@ -17,8 +18,9 @@ function getStudent() {
       str += `<li>${student.name}</li>`;
     });
     document.getElementById("students").innerHTML = str;
+    console.log("Student has been fethched");
   }, 1000);
 }
-let newStudent = {name:"waqar",subject:"python"}
+let newStudent = { name: "waqar", subject: "python" };
 enrollStudent(newStudent);
 getStudent();
