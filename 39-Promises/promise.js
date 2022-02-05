@@ -24,6 +24,6 @@ func1()
   .then(function () {
     console.log(" Awais Thanks for resolving");
   })
-  .catch(function () {
-    console.log("Awais : very bad bro");
+  .catch(function (error) {
+    console.log("Awais : very bad bro " + error);
   });
