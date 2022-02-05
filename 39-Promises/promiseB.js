@@ -43,3 +43,5 @@ enrollStudent(newStudent)
   });
 // getStudents();
 
+// function inside then is ran as - resolve
+// function inside catch is ran as - reject
