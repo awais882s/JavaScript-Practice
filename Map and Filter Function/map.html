@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Map Function</h1>
+  </body>
+  <script>
+    const arr = [1, 2, 3, 4, 5];
+    let b = arr.map(test);
+    document.write(b);
+    function test(x) {
+      return x * 10;
+    }
+
+    let array = [
+      { fname: "awais", lname: "iqbal" },
+      { fname: "awais1", lname: "iqbal1" },
+      { fname: "awais2", lname: "iqbal2" },
+    ];
+
+    let b1 = array.map(test1);
+    document.write(b1);
+    function test1(x1) {
+      return x1.fname + " " + x1.lname;
+    }
+  </script>
+</html>
