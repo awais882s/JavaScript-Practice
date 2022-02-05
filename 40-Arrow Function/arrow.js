@@ -20,8 +20,26 @@ awais1();
 
 // console.log(greet());
 
-
 // one liners do not require/braces
-// one line will automatically return 
+// one line will automatically return
 const greet = () => "good morning awais ";
 console.log(greet());
+
+// object
+const software = () => ({
+  name: "awais",
+});
+
+console.log(software());
+
+// get an input 1st way
+
+const greeting = (name) => "good  morning " + name;
+
+console.log(greeting("awais"));
+
+// get an input 2nd way
+
+const greeting1 = (name, ending) => "good  morning " + name;
+
+console.log(greeting1("greeting1 " + "goodbye"));
