@@ -1,1 +1,9 @@
 console.log("Fetch Api");
+// button with id myBtn
+let myBtn = document.getElementById("myBtn");
+
+
+
+// div with id content
+let content = document.getElementById("content");
+
