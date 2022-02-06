@@ -14,7 +14,7 @@ function getData() {
       return response.text();
     })
     .then((data) => {
-      console.log("inside first then");
+      console.log("inside second then");
       console.log(data);
     });
 }
