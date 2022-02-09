@@ -33,6 +33,24 @@ function getData() {
     });
 }
 
-console.log("Before running get Data");
-getData();
-console.log("After running get Data");
+// console.log("Before running get Data");
+// getData();
+// console.log("After running get Data");
+
+function postData() {
+  // console.log("Started getData");
+  url = "http://dummy.restapiexample.com/api/v1/create";
+  data = { name: "test", salary: "123", age: "23" };
+  params = {
+    method: "post",
+
+    Headers: {
+      "content-type": "application/json",
+    },
+    body: data,
+  };
+  fetch(url, params)
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+}
+postData();
